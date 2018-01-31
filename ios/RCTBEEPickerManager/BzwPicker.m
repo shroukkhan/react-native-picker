@@ -272,16 +272,18 @@
             _lineWith=(SCREEN_WIDTH-linSpace*(self.dataDry.count-1));
             
             if (self.weightArry.count>=self.dataDry.count) {
-                
+                double count=self.dataDry.count;
                 double totalweight=0;
                 
-                for (NSInteger i=0; i<self.dataDry.count; i++) {
-                    NSString *str=[NSString stringWithFormat:@"%@",[self.weightArry objectAtIndex:i]];
-                    totalweight=totalweight+str.doubleValue;
-                }
-                NSString *comStr=[NSString stringWithFormat:@"%@",[self.weightArry objectAtIndex:component]];
+                return _lineWith / count;
                 
-                return _lineWith*comStr.doubleValue/totalweight;
+//                for (NSInteger i=0; i<self.dataDry.count; i++) {
+//                    NSString *str=[NSString stringWithFormat:@"%@",[self.weightArry objectAtIndex:i]];
+//                    totalweight=totalweight+str.doubleValue;
+//                }
+//                NSString *comStr=[NSString stringWithFormat:@"%@",[self.weightArry objectAtIndex:component]];
+//
+//                return _lineWith*comStr.doubleValue/totalweight;
             }else
             {
                 if (self.weightArry.count>0) {
